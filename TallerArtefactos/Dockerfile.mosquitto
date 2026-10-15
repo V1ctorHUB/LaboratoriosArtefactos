@@ -1,0 +1,5 @@
+# Imagen de Mosquitto con la configuración del laboratorio incluida.
+# Se copia el archivo en vez de montarlo porque la ruta de esta carpeta
+# contiene ":" (02:2026) y Docker no acepta ":" en rutas de volúmenes.
+FROM eclipse-mosquitto:2
+COPY config/mosquitto.conf /mosquitto/config/mosquitto.conf
